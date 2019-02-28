@@ -1,0 +1,375 @@
+#map-container {
+     position: relative;
+     height: 500px;
+     width: 80%;
+ }
+ body {
+     background-color: #eeeeee;
+
+ }
+ header {
+     margin-top: 1%;
+     display: flex;
+     justify-content: space-around;
+     align-items: flex-end;
+     background-color: #2880ca;
+     margin-left: 2%;
+     margin-right: 2%;
+     border: 1px solid;
+     border-radius: 5px;
+      font-family: 'Roboto', sans-serif;
+ }
+
+ #titlu {
+     text-align: center;
+     padding-bottom: 1.5%;
+     color: white;
+     font-size: 1.4em;
+ }
+
+ .nav {
+     text-align: left;
+     height: 70px;
+     line-height: 70px;
+     margin-right: 5%;
+ }
+ .menu {
+     margin: 0 10px 0 0;
+     display: block;
+ }
+ .menu a {
+     clear: right;
+     text-decoration: none;
+     color: white;
+     margin: 0 10px;
+     font-size: 1.2em;
+ }
+ .menu a:hover {
+     border-top: 3px solid black;
+     padding-top: 10px;
+ }
+
+ #toggle1 {
+     margin: 0 40px 0;
+     font-size: 26px;
+     line-height: 70px;
+     display: none;
+     width: 26px;
+     float: right;
+ }
+ #toggle {
+     display: none;
+ }
+
+ /* Slider*/
+.slider {
+    position: relative;
+}
+ #section_slider img {
+     margin-top: 1%;
+     height: 600px;
+     width: 96%;
+     margin-left: 2%;
+     margin-right: 2%;
+     border: 1px solid;
+     border-radius: 5px;
+     object-fit: cover;
+ }
+
+ /* create arrows*/
+ .prev,
+ .next {
+     cursor: pointer;
+     position: absolute;
+     top: 100%;
+     padding: 30px;
+     color: #2880ca;
+     font-weight: bold;
+     font-size: 40px;
+     transition: 0.6s ease;
+     border-radius: 0 10px 10px 0;
+     user-select: none;
+     z-index: 3;
+ }
+
+ .dirP {
+     left: 2%;
+ }
+
+ .dirN {
+     right: 2%;
+ }
+
+ /*   Map  */
+ #map {
+     position: relative;
+     height: inherit;
+     width: inherit;
+ }
+
+ /* form and table*/
+ form {
+     width: 200px;
+     margin-left: 90%;
+     display: none;
+     margin-top: -30%;
+     background-color: #aad3df;
+     border: 1px solid #760001;
+     border-radius: 5px;
+ }
+
+ legend {
+     font-weight: bold;
+ }
+
+ /* Reserver*/
+ #signature {
+     display: none;
+     width: 230px;
+     margin-left: 90%;
+     margin-top: -30%;
+     background-color: #aad3df;
+     border: 1px solid;
+     border-radius: 5px;
+ }
+
+ #canvas {
+     background-color: black;
+ }
+
+ #reserver,
+ #annulerF,
+ #erase,
+ #submit,
+ #annuler {
+     border: 1px solid #760001;
+     border-radius: 5px;
+     font-size: 1em;
+     padding: 3px 8px 0px 8px;
+     color: white;
+ }
+
+ .colorF {
+     background-color: #f44336;
+ }
+
+ .colorR {
+     background-color: #4CAF50;
+ }
+
+ .btn-group {
+     display: inline-block;
+ }
+
+ /* chronometre*/
+ #no_res,#chronometre {
+     color: white;
+     border: 1px solid;
+     border-radius: 10px;
+     padding: 5px 10px;
+     text-align: center;
+     background-color: #004A7F;
+     position: relative;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1em;
+ }
+#chronometre {
+    display: none;
+}
+ .chronometre {
+     animation: glowing 1s infinite;
+     font-size: 1em;
+
+ }
+
+ @keyframes glowing {
+     0% {
+         background-color: #B20000
+     }
+
+     50% {
+         background-color: #FF0000
+     }
+
+     100% {
+         background-color: #B20000
+     }
+ }
+
+ h1 {
+     font-size: 1.2em;
+ }
+
+ /* media for map + form +counter */
+ @media all and (max-width: 2560px) {
+
+     form,
+     #signature {
+         margin-top: -18%;
+     }
+     .prev,
+     .next {
+         margin-top: -16%;
+     }
+ }
+
+ #slides img {
+     height: 600px;
+ }
+
+ @media all and (max-width: 1440px) {
+
+     form,
+     #signature {
+         margin-top: -30%;
+     }
+
+     .prev,
+     .next {
+         margin-top: -30%;
+     }
+ }
+
+ @media all and (max-width: 1240px) {
+
+     form,
+     #signature {
+         margin-top: -45%;
+     }
+
+     #slides img {
+         height: 500px;
+     }
+
+     .prev,
+     .next {
+         margin-top: -35%;
+     }
+ }
+
+ @media all and (max-width: 1024px) {
+
+     .prev,
+     .next {
+         margin-top: -45%;
+     }
+
+     form,
+     #signature {
+         margin-top: -40%;
+     }
+ }
+
+ @media all and (max-width: 940px) {
+
+     form,
+     #signature {
+         margin-top: -48%;
+     }
+ }
+
+     @media all and (max-width: 769px) {
+         #map {
+             height: 300px;
+
+         }
+
+         #map-container {
+             width: 100%;
+             height: 300px;
+         }
+
+         .prev,
+         .next {
+             margin-top: -35%;
+         }
+
+         form,
+         #signature {
+             margin-right: 10%;
+             margin-top: 1%;
+             margin-left: 10%;
+             width: 230px;
+         }
+
+         #toggle1 {
+             display: block;
+             cursor: pointer;
+         }
+
+         .nav {
+             margin-right: 0%;
+             z-index: 10;
+         }
+
+         .menu {
+             text-align: center;
+             width: 100%;
+             display: none;
+             background: #968e8e;
+
+         }
+
+         .menu a:hover {
+             border-top: 0px;
+             padding-top: 0px;
+             background: grey;
+
+         }
+
+         .menu a {
+             color: black;
+             display: block;
+             border-top: 1px solid black;
+             border-bottom: 1px solid black;
+             margin: 0;
+
+         }
+
+         #titlu {
+             padding-bottom: 5%;
+         }
+
+          #section_slider img {
+             height: 400px;
+         }
+         h1 {
+         font-size: 0.8em;
+     }
+     }
+     @media all and (max-width: 625px) {
+        .prev,
+         .next {
+             margin-top: -45%;
+         }
+     }
+       @media all and (max-width: 500px) {
+        .prev,
+         .next {
+             margin-top: -55%;
+         }
+     }
+     @media all and (max-width: 425px) {
+         .prev,
+         .next {
+             margin-top: -40%;
+         }
+
+         #section_slider img {
+             height: 200px;
+
+         }
+     }
+      @media all and (max-width: 350px) {
+        .prev,
+         .next {
+             margin-top: -55%;
+         }
+     }
+     @media all and (max-width: 270px) {
+        .prev,
+         .next {
+             margin-top: -65%;
+         }
+     }
+     

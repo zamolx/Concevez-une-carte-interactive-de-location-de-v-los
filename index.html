@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<link rel="icon" href="img/bike.jpg">
+<meta name="viewport" content="width=device-width">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/page.css">
+<!-- Initialise Map-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA==" crossorigin=""></script>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.Default.css" />
+<script src='https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js'></script>
+
+
+    <title>Reservation des velos - Marseille</title>
+</head>
+<body>
+    <header>
+        <div id="titlu">Reservation des velos - Marseille</div>
+        <div class="nav">
+            <label for="toggle" id="toggle1">&#x2630;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <a id="first" href="#map">Reserver</a>
+                <a href="#">Contact</a>
+            </div>
+        </div>
+    </header>
+    <div class="slider">
+        <div id="section_slider">
+            <img src="img/1_14.jpg" alt="First photo" id="image_slider">
+           <div id="previous" > <a class=" prev dirP ">&#10094;</a></div>
+           <div id="next"> <a class="next dirN ">&#10095;</a> </div>
+        </div>
+    </div>
+    <div id="map-container">
+        <div id="map">
+        </div>
+        <form method="post" id="form">
+            <fieldset id="fieldset">
+                <legend>Details de la station</legend>
+                <table id="infoStation">
+                    <tr>
+                        <th id="adressStation"></th>
+                    </tr>
+                    <tr>
+                        <td id="placesTotal"></td>
+                    </tr>
+                    <tr>
+                        <td id="dispoPlaces"></td>
+                    </tr>
+                </table>
+            
+                <p>
+                    <label for="nom" id="lNom">Nom :</label>
+                    <input  required="required" type="text" name="nom" placeholder="Votre nom" id="nom" >
+                    <span id="aideName"></span>
+                </p>
+                <p>
+                    <label for="prenom" id="lPrenom">Prenom :</label>
+                    <input required="required" type="text" name="prenom" placeholder="Votre prenom" id="prenom" >
+                    <span id="aidePrenom"></span>
+                </p>
+                <input type="button" id="reserver" class="colorR" value="Reserver">
+
+                <input type="button" id="annulerF" class="colorF" value="Fermer">
+                
+            </fieldset>
+        </form>
+        <fieldset id="signature">
+            <legend> Veuillez signer :</legend><br/>
+            <canvas id="canvas" width="200" height="170"></canvas>
+            <div>
+                <input type="button" name="clear" value="Erase" class="colorF" id="erase">
+                <input type="button" name="submit" value="Submit" class="colorR popup" id="submit">
+                <input type="button" name="annuler" value="Annuler" class="colorF" id="annuler">
+            </div>
+        </fieldset>
+    </div>
+    <footer>
+        <div id="no_res">
+            <h1>Pas de reservation en cours</h1>
+        </div>
+        <div id="chronometre" class="chronometre" >
+            <p>Velo reserve a la station <span id="adress"></span></p>
+            <p>Temp restant :<span id="minutes"></span>m <span id="secondes"></span>s</p>
+        </div>
+    </footer>
+    <script src="js/slider.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/station.js"></script>
+    <script src="js/reservation.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/signature.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
